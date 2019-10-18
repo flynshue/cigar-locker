@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+<div class="ui main container text">
+<h1 class="ui header">Cigar Locker Index Page</h1>
+
+<% cigars.forEach(function(cigar){ %>
+    <div class="ui container segment text">
+    <h2 class="ui header"><%= cigar.name %></h2>
+    <h3>Rating: <%= cigar.rating %></h3>
+    <img class="ui large rounded image" src="<%= cigar.image %>" alt="">
+    <p><%= cigar.notes %></p>
+    <span><%= cigar.created %></span>
+    <a href="/cigars/<%= cigar._id %>">Read More</a>
+    </div>
+<% }); %>
+
+</div>
+<% include ./partials/footer %>

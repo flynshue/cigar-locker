@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<div class="ui main container text">
+<h1 class="ui header">Add new cigar</h1>
+<div class="ui container segment text">
+        <form action="/cigars" method="post" class="ui form">
+            <div class="field">
+                <label for="">Name</label>
+                <input type="text" name="cigar[name]" placeholder="Cigar Name">
+            </div>
+            <div class="field">
+                <label for="">Image</label>
+                <input type="text" name="cigar[image]" placeholder="Image url">
+                </div>
+            <div class="field">
+                <label for="">Notes</label>
+                <textarea name="cigar[notes]"></textarea>
+            </div>
+            <div class="field">
+                <label for="">Rating</label>
+                <input type="number" min="1" max="5" name="cigar[rating]" id="" placeholder="Rating 1-5">
+            </div>
+            <input type="submit" name="" id="" class="ui primary button">
+        </form>
+</div>
+</div>
+<% include ./partials/footer %>

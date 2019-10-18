@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+<div class="ui main container text segment">
+    <h2 class="ui header"><%= cigar.name %></h2>
+    <h3>Rating: <%= cigar.rating %></h3>
+    <img class="ui large rounded image" src="<%= cigar.image %>" alt="">
+    <p><%= cigar.notes %></p>
+    <span><%= cigar.created %></span>
+    <div>
+    <a href="/cigars/<%= cigar._id %>/edit" class="ui primary button">Edit</a>
+    <form id="delete" action="/cigars/<%= cigar._id %>?_method=DELETE" method="POST">
+        <button class="ui button red">Delete</button>
+    </form>
+    </div>
+</div>
+<% include ./partials/footer %>
